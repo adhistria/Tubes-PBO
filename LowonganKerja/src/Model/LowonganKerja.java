@@ -23,21 +23,6 @@ public class LowonganKerja {
     
     public static void main(String[] args) {
            Aplikasi drv = new Aplikasi();
-           
-//           drv.
-//           drv.getBerkas(1);
-//         drv  
-//           Pelamar adhi=new Pelamar();
-//           adhi.setUsername("ADHI");
-//           adhi.setPassword("ADHI");
-//           drv.addPelamar(adhi);
-//           Perusahaan pertamina=new Perusahaan();
-//           pertamina.setUsername("TES");
-//           pertamina.setPassword("TES");
-//           pertamina.setNama("pertamina");
-//           pertamina.createLowongan("1 Februari", "Project Manager", "01");
-//           drv.addPerusahaan(pertamina);
-
            new ControllerLogin(drv);
     }
     
