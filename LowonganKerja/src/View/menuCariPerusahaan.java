@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -74,10 +75,28 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         pengalamanedit = new javax.swing.JTextField();
         btnEdit = new javax.swing.JButton();
         btnLogOut4 = new javax.swing.JButton();
+        lihatberkas = new javax.swing.JPanel();
+        berkasanda = new javax.swing.JLabel();
+        idpelamar = new javax.swing.JLabel();
+        namapelamar = new javax.swing.JLabel();
+        nohppelamar = new javax.swing.JLabel();
+        emailpelamar = new javax.swing.JLabel();
+        pendidikan = new javax.swing.JLabel();
+        skillberkas = new javax.swing.JLabel();
+        pengalamanberkas = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        btnLogOut5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(522, 522));
 
         nmperusahaanlabel.setFont(new java.awt.Font("Myriad Hebrew", 0, 14)); // NOI18N
         nmperusahaanlabel.setText("Nama Perusahaan :");
@@ -114,7 +133,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addComponent(nmperusahaanlabel)
                 .addGap(63, 63, 63)
                 .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnLogOut))
@@ -130,7 +149,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nmperusahaanlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(79, 79, 79)
                 .addComponent(btnLogOut))
@@ -176,7 +195,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                             .addComponent(skilllabel)
                             .addGap(18, 18, 18)
                             .addComponent(skill, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(311, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buatberkasLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnLogOut1))
@@ -195,7 +214,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                     .addGroup(buatberkasLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(pengalaman, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(btnBuat)
                 .addGap(30, 30, 30)
                 .addComponent(btnLogOut1))
@@ -231,7 +250,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addComponent(btnDaftar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infolowongankerjaLayout.createSequentialGroup()
-                .addContainerGap(270, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(79, 79, 79)
                 .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,7 +268,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                     .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(120, 120, 120)
                 .addComponent(btnDaftar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
                 .addComponent(btnLogOut2))
         );
 
@@ -276,7 +295,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         berkasditerimaLayout.setHorizontalGroup(
             berkasditerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(berkasditerimaLayout.createSequentialGroup()
-                .addContainerGap(320, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(berkasditerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, berkasditerimaLayout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -288,7 +307,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         berkasditerimaLayout.setVerticalGroup(
             berkasditerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, berkasditerimaLayout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(136, 136, 136)
                 .addComponent(btnLogOut3))
@@ -334,7 +353,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                             .addComponent(skilleditlabel)
                             .addGap(18, 18, 18)
                             .addComponent(skilledit, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editberkasLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnLogOut4))
@@ -355,11 +374,104 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                         .addComponent(pengalamanedit, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(51, 51, 51)
                 .addComponent(btnEdit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(btnLogOut4))
         );
 
         jTabbedPane1.addTab("Edit Berkas", editberkas);
+
+        berkasanda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        berkasanda.setText("Berkas Anda!");
+
+        idpelamar.setText("Id Pelamar          :");
+
+        namapelamar.setText("Nama Pelamar    :");
+
+        nohppelamar.setText("No.HP Pelamar   :");
+
+        emailpelamar.setText("Email Pelamar     :");
+
+        pendidikan.setText("Pendidikan         :");
+
+        skillberkas.setText("Skill                     :");
+
+        pengalamanberkas.setText("Pengalaman       :");
+
+        btnLogOut5.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
+        btnLogOut5.setText("Log Out");
+
+        javax.swing.GroupLayout lihatberkasLayout = new javax.swing.GroupLayout(lihatberkas);
+        lihatberkas.setLayout(lihatberkasLayout);
+        lihatberkasLayout.setHorizontalGroup(
+            lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lihatberkasLayout.createSequentialGroup()
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lihatberkasLayout.createSequentialGroup()
+                        .addGap(338, 338, 338)
+                        .addComponent(berkasanda, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lihatberkasLayout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(pengalamanberkas, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                            .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(idpelamar, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                .addComponent(namapelamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(nohppelamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(emailpelamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(pendidikan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(skillberkas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(291, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lihatberkasLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnLogOut5))
+        );
+        lihatberkasLayout.setVerticalGroup(
+            lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lihatberkasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(berkasanda, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idpelamar)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(namapelamar)
+                    .addComponent(jLabel9))
+                .addGap(18, 18, 18)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nohppelamar)
+                    .addComponent(jLabel10))
+                .addGap(24, 24, 24)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailpelamar)
+                    .addComponent(jLabel11))
+                .addGap(18, 18, 18)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pendidikan)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(skillberkas)
+                    .addComponent(jLabel13))
+                .addGap(18, 18, 18)
+                .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pengalamanberkas)
+                    .addComponent(jLabel14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
+                .addComponent(btnLogOut5))
+        );
+
+        jTabbedPane1.addTab("Lihat Berkas", lihatberkas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -477,6 +589,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         btnLogOut3.addActionListener(e);
         btnEdit.addActionListener(e);
         btnLogOut4.addActionListener(e);
+        btnLogOut5.addActionListener(e);
     }
     
     public void addAdapter(MouseAdapter e){
@@ -546,11 +659,46 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     public void setSkilledit(String skilledit) {
         this.skilledit.setText(skilledit);
     }
+
+    public JButton getBtnLogOut5() {
+        return btnLogOut5;
+    }
+
+    public void setIdpelamarset(String s) {
+        this.jLabel8.setText(s);
+    }
+
+    public void setNamapelamarset(String s) {
+        this.jLabel9.setText(s);
+    }
+
+    public void setNohppelamarset(String s) {
+        this.jLabel10.setText(s);
+    }
+
+    public void setEmailpelamarset(String s) {
+        this.jLabel11.setText(s);
+    }
+    
+
+    public void setPendidikanset(String s) {
+        this.jLabel12.setText(s);
+    }
+
+    public void setPengalamanlihatset(String s) {
+        this.jLabel14.setText(s);
+    }
+
+    public void setSkilllihatset(String s) {
+        this.jLabel13.setText(s);
+    }
+    
     
     
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel berkasanda;
     private javax.swing.JPanel berkasditerima;
     private javax.swing.JButton btnBuat;
     private java.awt.Button btnCari;
@@ -561,21 +709,37 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     private javax.swing.JButton btnLogOut2;
     private javax.swing.JButton btnLogOut3;
     private javax.swing.JButton btnLogOut4;
+    private javax.swing.JButton btnLogOut5;
     private javax.swing.JPanel buatberkas;
     private javax.swing.JPanel cariperusahaan;
     private javax.swing.JPanel editberkas;
+    private javax.swing.JLabel emailpelamar;
+    private javax.swing.JLabel idpelamar;
     private javax.swing.JPanel infolowongankerja;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel lihatberkas;
+    private javax.swing.JLabel namapelamar;
     private javax.swing.JTextField nmperusahaan;
     private javax.swing.JLabel nmperusahaanlabel;
+    private javax.swing.JLabel nohppelamar;
+    private javax.swing.JLabel pendidikan;
     private javax.swing.JTextField pengalaman;
+    private javax.swing.JLabel pengalamanberkas;
     private javax.swing.JTextField pengalamanedit;
     private javax.swing.JLabel pengalamaneditlabel;
     private javax.swing.JLabel pengalamanlabel;
     private javax.swing.JScrollBar scroll;
     private javax.swing.JTextField skill;
+    private javax.swing.JLabel skillberkas;
     private javax.swing.JTextField skilledit;
     private javax.swing.JLabel skilleditlabel;
     private javax.swing.JLabel skilllabel;

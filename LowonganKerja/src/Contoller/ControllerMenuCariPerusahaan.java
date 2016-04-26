@@ -34,6 +34,18 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
         view.addAdapter(this);
         this.p=p;
         lowongan=model.tampilLowongan();
+        if(model.getBerkasPelamar(p)!= null){
+            int s=model.getBerkasPelamar(p).getIdBerkas();
+            String c=""+s;
+            view.setIdpelamarset(c);
+            view.setNamapelamarset(model.getBerkasPelamar(p).getNama());
+            view.setEmailpelamarset(model.getBerkasPelamar(p).getEmail());
+            view.setNohppelamarset(model.getBerkasPelamar(p).getNoHp());
+            view.setPendidikanset(model.getBerkasPelamar(p).getPendidikan());
+            view.setSkilllihatset(model.getBerkasPelamar(p).getSkill());
+            view.setPengalamanlihatset(model.getBerkasPelamar(p).getPengalaman());
+        }
+
     }
     public void mouseClicked(MouseEvent e){
         if(e.getSource().equals(view.getTableLowongan())){
@@ -72,14 +84,19 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
             model.daftarKerja(p, lowongan.get(selected).getIdLowongan());
         }else if(source.equals(view.getBtnLogOut())){
             new ControllerLogin(model);
+            view.dispose();
         }else if(source.equals(view.getBtnLogOut1())){
             new ControllerLogin(model);
+            view.dispose();
         }else if(source.equals(view.getBtnLogOut2())){
             new ControllerLogin(model);
+            view.dispose();
         }else if(source.equals(view.getBtnLogOut3())){
             new ControllerLogin(model);
+            view.dispose();
         }else if(source.equals(view.getBtnLogOut4())){
             new ControllerLogin(model);
+            view.dispose();
         }else if(source.equals(view.getBtnEdit())){
             if(model.getBerkasPelamar(p)==null){
                 JOptionPane.showMessageDialog(null, "Anda Belum Membuat Berkas");
@@ -91,7 +108,11 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
                 String pengalamanedit = view.getPengalamanedit();
                 model.updateBerkas(p,skilledit,pengalamanedit);
             }
+        }else if(source.equals(view.getBtnLogOut5())){
+            new ControllerLogin(model);
+            view.dispose();
         }
+        
     }
 }
     

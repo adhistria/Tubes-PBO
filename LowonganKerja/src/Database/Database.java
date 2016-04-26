@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
  * @author adhis
  */
 public class Database {
-    private String server="jdbc:mysql://127.0.0.1/pbo";
+    private String server="jdbc:mysql://127.0.0.1/mirahcantik";
     private String dbUser ="root";
     private String dbPasswd="";
     Statement statement;
