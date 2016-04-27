@@ -46,11 +46,6 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        cariperusahaan = new javax.swing.JPanel();
-        nmperusahaanlabel = new javax.swing.JLabel();
-        nmperusahaan = new javax.swing.JTextField();
-        btnCari = new java.awt.Button();
-        btnLogOut = new javax.swing.JButton();
         buatberkas = new javax.swing.JPanel();
         skilllabel = new javax.swing.JLabel();
         pengalamanlabel = new javax.swing.JLabel();
@@ -92,73 +87,16 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         btnLogOut5 = new javax.swing.JButton();
+        cariperusahaan = new javax.swing.JPanel();
+        nmperusahaanlabel = new javax.swing.JLabel();
+        nmperusahaan = new javax.swing.JTextField();
+        btnCari = new java.awt.Button();
+        btnLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(522, 522));
-
-        nmperusahaanlabel.setFont(new java.awt.Font("Myriad Hebrew", 0, 14)); // NOI18N
-        nmperusahaanlabel.setText("Nama Perusahaan :");
-        nmperusahaanlabel.setName("nmperusahaanlabel"); // NOI18N
-
-        nmperusahaan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nmperusahaanActionPerformed(evt);
-            }
-        });
-
-        btnCari.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        btnCari.setLabel("Cari");
-        btnCari.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCariActionPerformed(evt);
-            }
-        });
-
-        btnLogOut.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
-        btnLogOut.setText("Log Out");
-        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogOutActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout cariperusahaanLayout = new javax.swing.GroupLayout(cariperusahaan);
-        cariperusahaan.setLayout(cariperusahaanLayout);
-        cariperusahaanLayout.setHorizontalGroup(
-            cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cariperusahaanLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(nmperusahaanlabel)
-                .addGap(63, 63, 63)
-                .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
-                        .addComponent(btnLogOut)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
-                        .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(283, 283, 283))))
-        );
-        cariperusahaanLayout.setVerticalGroup(
-            cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cariperusahaanLayout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nmperusahaanlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
-                .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
-                .addComponent(btnLogOut)
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Cari Perusahaan", cariperusahaan);
 
         skilllabel.setText("Skill                                 :");
 
@@ -485,6 +423,68 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Lihat Berkas", lihatberkas);
 
+        nmperusahaanlabel.setFont(new java.awt.Font("Myriad Hebrew", 0, 14)); // NOI18N
+        nmperusahaanlabel.setText("Nama Perusahaan :");
+        nmperusahaanlabel.setName("nmperusahaanlabel"); // NOI18N
+
+        nmperusahaan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nmperusahaanActionPerformed(evt);
+            }
+        });
+
+        btnCari.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btnCari.setLabel("Cari");
+        btnCari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCariActionPerformed(evt);
+            }
+        });
+
+        btnLogOut.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
+        btnLogOut.setText("Log Out");
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout cariperusahaanLayout = new javax.swing.GroupLayout(cariperusahaan);
+        cariperusahaan.setLayout(cariperusahaanLayout);
+        cariperusahaanLayout.setHorizontalGroup(
+            cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cariperusahaanLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(nmperusahaanlabel)
+                .addGap(63, 63, 63)
+                .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(130, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
+                        .addComponent(btnLogOut)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
+                        .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(283, 283, 283))))
+        );
+        cariperusahaanLayout.setVerticalGroup(
+            cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cariperusahaanLayout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nmperusahaanlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76)
+                .addComponent(btnLogOut)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Cari Perusahaan", cariperusahaan);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -493,7 +493,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
