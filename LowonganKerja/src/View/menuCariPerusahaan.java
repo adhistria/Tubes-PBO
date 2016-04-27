@@ -605,8 +605,8 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         for(int i=0;i<lowongan.size();i++){
             Lowongan l=lowongan.get(i);
             data[i][0]=String.valueOf(l.getIdLowongan());
-            data[i][1]=String.valueOf(l.getDeadline());
             data[i][2]=String.valueOf(l.getNama());
+            data[i][1]=String.valueOf(l.getDeadline());            
         }
         tableLowongan.setModel(new DefaultTableModel(data,judul));
     }

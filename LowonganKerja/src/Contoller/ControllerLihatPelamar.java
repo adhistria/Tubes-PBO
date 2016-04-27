@@ -14,6 +14,7 @@ import Model.Lowongan;
 import Model.Perusahaan;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -37,38 +38,49 @@ class ControllerLihatPelamar extends MouseAdapter implements ActionListener{
         view.setVisible(true);
         view.addListener(this);
         view.addAdapter(this);
-        view.viewAll(model.getBerkas(idLowongan));
-        p.getLowongan(idLowongan).setBerkasMasuk(model.getBerkas(idLowongan));
+        if(model.getBerkas(idLowongan)!=null){
+            view.viewAll(model.getBerkas(idLowongan));
+            p.getLowongan(idLowongan).setBerkasMasuk(model.getBerkas(idLowongan));
+        }
+        else{
+            List <BerkasLamaran> berkas2=new ArrayList<>();
+            view.viewAll(berkas2);
+        }
 //        lowongan=p.getLowongan(idLowongan);
 //        lowongan.setBerkasMasuk(model.getBerkas(idLowongan));
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getEmail());
-        System.out.println(""+p.getLowongan(idLowongan).getBerkas(0).getIdBerkas());
-        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
-        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getNama());
-        System.out.println(""+idLowongan);
+//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getEmail());
+//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(0).getIdBerkas());
+//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
+//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getNama());
+//        System.out.println(""+idLowongan);
         if(source.equals(view.getBtnTerima())){
-            if(model.getBerkas(idLowongan).get(idPelamar).getIdBerkas()>0){
-                p.getLowongan(idLowongan).pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
-//                        pindahBerkas(lowongan.getBerkas(idPelamar).getIdBerkas());
-                model.pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas(), idLowongan);
-                JOptionPane.showMessageDialog(null, "Data telah diApprove!");
+                if(model.getBerkas(idLowongan)!=null){
+                     
+    //                        pindahBerkas(lowongan.getBerkas(idPelamar).getIdBerkas());
+                    model.pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas(), idLowongan);
+                    p.getLowongan(idLowongan).pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
+                    JOptionPane.showMessageDialog(null, "Data telah diApprove!");
+                    if(model.getBerkas(idLowongan)!=null){
+                        view.viewAll(model.getBerkas(idLowongan));
+                        p.getLowongan(idLowongan).setBerkasMasuk(model.getBerkas(idLowongan));
+                    }else{
+                        List <BerkasLamaran> berkas2=new ArrayList<>();
+                        view.viewAll(berkas2);
+                    }
+                }else{
+                JOptionPane.showMessageDialog(null, "Data Tidak Ada");
+                }
+            } else if(source.equals(view.getBtnKembali())){
+                new ControllerMenuLowongan(model,p);
                 view.dispose();
-                view.viewAll(model.getBerkas(idLowongan));
-                p.getLowongan(idLowongan).setBerkasMasuk(model.getBerkas(idLowongan));
-            }else{
-                JOptionPane.showMessageDialog(null, "Data Na");
+            } else if(source.equals((view.getBtnLogOut()))){
+                new ControllerLogin(model);
             }
-        } else if(source.equals(view.getBtnKembali())){
-            new ControllerMenuLowongan(model,p);
-            view.dispose();
-        } else if(source.equals((view.getBtnLogOut()))){
-            new ControllerLogin(model);
         }
-    }
     public void MouseClicked(MouseEvent e){
         if(e.getSource().equals(view.getTblBerkas())){
             idPelamar=view.getSelected();

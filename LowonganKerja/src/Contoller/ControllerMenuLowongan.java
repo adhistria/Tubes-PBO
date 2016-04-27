@@ -63,7 +63,6 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
             view.setNamaLowongan("");
             view.setTanggal("");
         } else if(menulowongan.equals(view.getBtnLihat())){
-            System.out.println(""+p.getDaftarLowongan().size());
             if(model.cariPerusahaan(p.getNama()).size()>0){
                 view.setVisible(false);
                 new ControllerLihatPelamar(model,p,p.getDaftarLowongan().get(selected).getIdLowongan());

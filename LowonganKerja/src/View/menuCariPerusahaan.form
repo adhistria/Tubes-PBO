@@ -522,14 +522,12 @@
                               <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="pengalamanberkas" pref="122" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="idpelamar" pref="122" max="32767" attributes="0"/>
-                                      <Component id="namapelamar" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="nohppelamar" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="emailpelamar" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="pendidikan" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="skillberkas" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="idpelamar" alignment="1" pref="122" max="32767" attributes="0"/>
+                                  <Component id="namapelamar" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="nohppelamar" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="emailpelamar" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="pendidikan" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="skillberkas" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">

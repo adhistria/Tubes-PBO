@@ -92,10 +92,10 @@ public class Aplikasi {
     public List<BerkasLamaran> getBerkas(int idLowongan){
         List<BerkasLamaran> berkas=new ArrayList<>();
         berkas=data.getBerkas(idLowongan);
-        if(berkas!=null){
-            return berkas;
-        }else{
+        if(berkas.size()==0){
             return null;
+        }else{
+            return berkas;
         }
     }
     
