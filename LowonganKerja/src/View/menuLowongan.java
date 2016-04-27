@@ -205,7 +205,7 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("                Daftar Lowongan                ", jPanel2);
+        jTabbedPane1.addTab("Daftar Lowongan", jPanel2);
 
         btnHapus.setText("Hapus");
 
@@ -252,7 +252,7 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
-        jTabbedPane1.addTab("                  Hapus Lowongan                ", jPanel3);
+        jTabbedPane1.addTab("Hapus Lowongan", jPanel3);
 
         namalowongan.setText("Nama Lowongan        :");
 
@@ -318,7 +318,7 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addGap(5, 5, 5))
         );
 
-        jTabbedPane1.addTab("                Buat Lowongan               ", jPanel1);
+        jTabbedPane1.addTab("Buat Lowongan", jPanel1);
 
         tblPelamar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -360,7 +360,7 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("       Pelamar Diterima       ", jPanel4);
+        jTabbedPane1.addTab("Pelamar Diterima", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -370,7 +370,7 @@ public class menuLowongan extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         pack();

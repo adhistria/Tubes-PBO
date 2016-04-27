@@ -133,14 +133,16 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addComponent(nmperusahaanlabel)
                 .addGap(63, 63, 63)
                 .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogOut))
+                .addContainerGap(130, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(303, 303, 303))
+                .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
+                        .addComponent(btnLogOut)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cariperusahaanLayout.createSequentialGroup()
+                        .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(283, 283, 283))))
         );
         cariperusahaanLayout.setVerticalGroup(
             cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,13 +151,14 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addGroup(cariperusahaanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nmperusahaanlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nmperusahaan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
                 .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addComponent(btnLogOut))
+                .addGap(76, 76, 76)
+                .addComponent(btnLogOut)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("                    Cari Perusahaan                   ", cariperusahaan);
+        jTabbedPane1.addTab("Cari Perusahaan", cariperusahaan);
 
         skilllabel.setText("Skill                                 :");
 
@@ -183,27 +186,30 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         buatberkasLayout.setHorizontalGroup(
             buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buatberkasLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnBuat, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(buatberkasLayout.createSequentialGroup()
-                            .addComponent(pengalamanlabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(pengalaman))
-                        .addGroup(buatberkasLayout.createSequentialGroup()
-                            .addComponent(skilllabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(skill, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buatberkasLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogOut1))
+                .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buatberkasLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnLogOut1))
+                    .addGroup(buatberkasLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnBuat, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(buatberkasLayout.createSequentialGroup()
+                                    .addComponent(pengalamanlabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(pengalaman))
+                                .addGroup(buatberkasLayout.createSequentialGroup()
+                                    .addComponent(skilllabel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(skill, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 95, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         buatberkasLayout.setVerticalGroup(
             buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buatberkasLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(skilllabel)
                     .addComponent(skill, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -214,13 +220,14 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                     .addGroup(buatberkasLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(pengalaman, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                .addGap(72, 72, 72)
                 .addComponent(btnBuat)
-                .addGap(30, 30, 30)
-                .addComponent(btnLogOut1))
+                .addGap(38, 38, 38)
+                .addComponent(btnLogOut1)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("                           Buat Berkas                           ", buatberkas);
+        jTabbedPane1.addTab("Buat Berkas", buatberkas);
 
         btnDaftar.setFont(new java.awt.Font("Lucida Sans Typewriter", 1, 12)); // NOI18N
         btnDaftar.setText("Daftar");
@@ -248,31 +255,32 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
             .addGroup(infolowongankerjaLayout.createSequentialGroup()
                 .addGap(304, 304, 304)
                 .addComponent(btnDaftar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infolowongankerjaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(infolowongankerjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infolowongankerjaLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73)
+                        .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLogOut2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infolowongankerjaLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogOut2))
         );
         infolowongankerjaLayout.setVerticalGroup(
             infolowongankerjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infolowongankerjaLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(infolowongankerjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
+                .addGroup(infolowongankerjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(scroll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE))
                 .addGap(120, 120, 120)
                 .addComponent(btnDaftar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
-                .addComponent(btnLogOut2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addComponent(btnLogOut2)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("                        Info Lowongan Kerja                       ", infolowongankerja);
+        jTabbedPane1.addTab("Info Lowongan Kerja", infolowongankerja);
 
         tableBerkasDiterima.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -295,11 +303,11 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         berkasditerimaLayout.setHorizontalGroup(
             berkasditerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(berkasditerimaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(131, Short.MAX_VALUE)
                 .addGroup(berkasditerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, berkasditerimaLayout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99))
+                        .addGap(106, 106, 106))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, berkasditerimaLayout.createSequentialGroup()
                         .addComponent(btnLogOut3)
                         .addContainerGap())))
@@ -307,10 +315,11 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         berkasditerimaLayout.setVerticalGroup(
             berkasditerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, berkasditerimaLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(136, 136, 136)
-                .addComponent(btnLogOut3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addComponent(btnLogOut3)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Berkas Diterima", berkasditerima);
@@ -341,7 +350,7 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         editberkasLayout.setHorizontalGroup(
             editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editberkasLayout.createSequentialGroup()
-                .addGap(141, 141, 141)
+                .addGap(78, 78, 78)
                 .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -353,15 +362,16 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                             .addComponent(skilleditlabel)
                             .addGap(18, 18, 18)
                             .addComponent(skilledit, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editberkasLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogOut4))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLogOut4)
+                .addContainerGap())
         );
         editberkasLayout.setVerticalGroup(
             editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editberkasLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(47, 47, 47)
                 .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(skilleditlabel)
                     .addComponent(skilledit, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -374,8 +384,9 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                         .addComponent(pengalamanedit, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(51, 51, 51)
                 .addComponent(btnEdit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
-                .addComponent(btnLogOut4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(btnLogOut4)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Edit Berkas", editberkas);
@@ -405,21 +416,20 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         lihatberkasLayout.setHorizontalGroup(
             lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lihatberkasLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
                 .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(lihatberkasLayout.createSequentialGroup()
-                        .addGap(338, 338, 338)
+                        .addGap(152, 152, 152)
                         .addComponent(berkasanda, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(lihatberkasLayout.createSequentialGroup()
-                        .addGap(186, 186, 186)
                         .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pengalamanberkas, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                            .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(idpelamar, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                .addComponent(namapelamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(nohppelamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(emailpelamar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(pendidikan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(skillberkas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(pengalamanberkas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(idpelamar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(namapelamar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(nohppelamar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(emailpelamar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pendidikan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(skillberkas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -429,15 +439,16 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(291, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lihatberkasLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogOut5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLogOut5)
+                .addGap(19, 19, 19))
         );
         lihatberkasLayout.setVerticalGroup(
             lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lihatberkasLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(28, 28, 28)
                 .addComponent(berkasanda, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -467,8 +478,9 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addGroup(lihatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pengalamanberkas)
                     .addComponent(jLabel14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
-                .addComponent(btnLogOut5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                .addComponent(btnLogOut5)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Lihat Berkas", lihatberkas);
@@ -477,15 +489,11 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 882, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

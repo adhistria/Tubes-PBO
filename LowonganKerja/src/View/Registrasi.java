@@ -318,7 +318,7 @@ public class Registrasi extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("                                                    Pelamar                                                  ", jPanel1);
+        jTabbedPane1.addTab("                                                 Pelamar                                               ", jPanel1);
 
         jLabel7.setFont(new java.awt.Font("NewsGoth Lt BT", 1, 18)); // NOI18N
         jLabel7.setText("Registrasi");
@@ -425,7 +425,7 @@ public class Registrasi extends javax.swing.JFrame {
                 .addGap(58, 58, 58))
         );
 
-        jTabbedPane1.addTab("                                             Perusahaan                                              ", jPanel2);
+        jTabbedPane1.addTab("                                          Perusahaan                                           ", jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -437,7 +437,7 @@ public class Registrasi extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1))
         );
 
         pack();

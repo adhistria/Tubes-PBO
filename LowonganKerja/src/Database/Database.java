@@ -23,9 +23,9 @@ import javax.swing.JOptionPane;
  * @author adhis
  */
 public class Database {
-    private String server="jdbc:mysql://127.0.0.1/pbo";
+    private String server="jdbc:mysql://127.0.0.1/pbo(1)";
     private String dbUser ="root";
-    private String dbPasswd="";
+    private String dbPasswd="halohalo";
     Statement statement;
     Connection connection;
     
