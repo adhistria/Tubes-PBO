@@ -23,9 +23,9 @@ import javax.swing.JOptionPane;
  * @author adhis
  */
 public class Database {
-    private String server="jdbc:mysql://127.0.0.1/pbo(1)";
+    private String server="jdbc:mysql://127.0.0.1/pbo";
     private String dbUser ="root";
-    private String dbPasswd="halohalo";
+    private String dbPasswd="";
     Statement statement;
     Connection connection;
     
@@ -83,10 +83,11 @@ public class Database {
     }
     public void saveLowongan(Lowongan l,Perusahaan p){
         try{
-            String query="INSERT INTO LOWONGAN(idPerusahaan,deadline,namaLowongan) VALUES("+
+            String query="INSERT INTO LOWONGAN(idPerusahaan,deadline,namaLowongan,nmPerusahaan) VALUES("+
                     "'"+p.getId()+"',"+
                     "'"+l.getDeadline()+"',"+
-                    "'"+l.getNama()+"')";
+                    "'"+l.getNama()+"',"+
+                    "'"+p.getNama()+"')";
             statement.execute(query,Statement.RETURN_GENERATED_KEYS);
             ResultSet rs=statement.getGeneratedKeys();
             int generateId=-1;
@@ -212,6 +213,33 @@ public class Database {
              return null;
          }
      }
+     
+     public List<BerkasLamaran> getBerkas2(Perusahaan p){
+         List<BerkasLamaran> berkas=new ArrayList<>();
+         String status="Berkas Diterima";
+      try{
+             String query="SELECT * FROM LOWONGAN NATURAL JOIN MELAMAR NATURAL JOIN PELAMAR NATURAL JOIN BERKASLAMAR WHERE "
+                     + "idPerusahaan = '"+p.getId()+"'"
+                     + "AND status = '"+status+"'";
+             ResultSet rs=statement.executeQuery(query);
+             while(rs.next()){
+                 BerkasLamaran b =new BerkasLamaran();
+                 b.setNama(rs.getString("nama"));
+                 b.setEmail(rs.getString("email"));
+                 b.setPengalaman(rs.getString("pengalaman"));
+                 b.setPendidikan(rs.getString("pendidikan"));
+                 b.setIdBerkas(rs.getInt("idPelamar"));
+                 b.setNoHp(rs.getString("noHp"));
+                 b.setSkill(rs.getString("skill"));
+                 berkas.add(b);
+             }
+             return berkas;
+         }catch(SQLException ex){
+             System.out.println("Get data gagal"+ex);
+             return null;
+         }
+     }
+     
      public List<Lowongan> getBerkasDiterima(Pelamar p){
          List<Lowongan> lowongan=new ArrayList<>();
          String status="Berkas Diterima";
@@ -284,6 +312,29 @@ public class Database {
              return null;
          }
      }
+     public List<Lowongan> getLowongan2(){
+         List<Lowongan> low=new ArrayList<>();
+         try{
+             String query="SELECT * FROM PERUSAHAAN NATURAL JOIN LOWONGAN";
+             ResultSet rs=statement.executeQuery(query);
+             while(rs.next()){
+                 Lowongan l=new Lowongan(rs.getInt("idLowongan"), rs.getString("deadline"), rs.getString("namaLowongan"),rs.getString("nmPerusahaan"));
+                 low.add(l);
+             }
+             return low;
+         }catch(SQLException ex){
+             System.out.println("Get data gagal");
+             return null;
+         }
+     }     
+//     public Perusahaan getPerusahaan(Lowongan l){
+//         Perusahaan p=null;
+//         try{
+//             String query="SELECT * FROM PERUSAHAAN WHERE "
+//                     + "idPerusahaan = '"+l.get
+//         }
+//     }
+     
      public void removeLowongan(Perusahaan p,int idLowongan){
          try{
              String query="DELETE FROM Lowongan WHERE"

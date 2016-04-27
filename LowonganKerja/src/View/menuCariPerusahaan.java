@@ -607,14 +607,15 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     
     public void viewAllLowongan(List<Lowongan> lowongan){
         String [] judul= {
-            "idLowongan","Nama Lowongan","DeadLine"
+            "idLowongan","Nama Lowongan","DeadLine","Nama Perusahaan"
         };
-        String[][] data=new String[lowongan.size()][3];
+        String[][] data=new String[lowongan.size()][4];
         for(int i=0;i<lowongan.size();i++){
             Lowongan l=lowongan.get(i);
             data[i][0]=String.valueOf(l.getIdLowongan());
-            data[i][2]=String.valueOf(l.getNama());
-            data[i][1]=String.valueOf(l.getDeadline());            
+            data[i][1]=String.valueOf(l.getNama());
+            data[i][2]=String.valueOf(l.getDeadline());
+            data[i][3]=l.getNamaPerusahaan();
         }
         tableLowongan.setModel(new DefaultTableModel(data,judul));
     }

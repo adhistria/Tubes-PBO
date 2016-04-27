@@ -46,6 +46,12 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
             view.viewAll(lowongan);
             view.viewAll2(lowongan);
         }
+        if(model.getBerkasTerima(p)!=null){
+            view.viewAll3(model.getBerkasTerima(p));
+        }else{
+            List<BerkasLamaran> berkas=new ArrayList<>();
+            view.viewAll3(berkas);
+        }
         view.setVisible(true);
         view.addListener(this);
         view.addAdapter(this);

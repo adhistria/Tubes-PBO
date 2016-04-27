@@ -29,7 +29,7 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
         view= new menuCariPerusahaan();
         view.setVisible(true);
         view.addListener(this);
-        view.viewAllLowongan(model.tampilLowongan());
+        view.viewAllLowongan(model.tampilLowongan2());
         view.viewAllBerkasDiterima(model.getBerkasDiterima(p));
         view.addAdapter(this);
         this.p=p;
@@ -63,7 +63,7 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
             }
             else{
                 String namaPerusahaan=view.getNmperusahaan();
-                if(model.cariPerusahaan(namaPerusahaan).size()>0){
+                if(model.cariPerusahaan(namaPerusahaan)!=null){
                     List<Lowongan> low=model.cariPerusahaan(namaPerusahaan);
                     view.setVisible(false);
                     new ControllerHasilPencarianPerusahaan(model,low,p,namaPerusahaan);                

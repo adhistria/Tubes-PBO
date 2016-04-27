@@ -71,6 +71,16 @@ public class Aplikasi {
         }
     }
     
+    public List<Lowongan> tampilLowongan2(){
+        List<Lowongan> low=new ArrayList<>();
+        low=data.getLowongan2();
+        if(low!=null){
+            return low;
+        }else{
+            return null;
+        }
+    }
+    
     public List<Lowongan> cariPerusahaan(String namaPerusahaan){
         List<Lowongan> low=new ArrayList<>();
         low=data.getLowongan(namaPerusahaan);
@@ -120,6 +130,16 @@ public class Aplikasi {
     }
     public void updateBerkas(Pelamar p,String skill,String pengalaman){
         data.updateBerkas(p, skill,pengalaman);
+    }
+    
+    public List<BerkasLamaran> getBerkasTerima(Perusahaan p){
+        List<BerkasLamaran> berkas=new ArrayList<>();
+        berkas=data.getBerkas2(p);
+        if(berkas.size()==0){
+            return null;
+        }else{
+            return berkas;
+        }
     }
     
 //    private Simpan data;

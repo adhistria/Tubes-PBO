@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.BerkasLamaran;
 import Model.Lowongan;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -50,6 +51,7 @@ public class menuLowongan extends javax.swing.JFrame {
         btnLogOut.addActionListener(e);
         btnLogOut1.addActionListener(e);
         btnLogOut2.addActionListener(e);
+        btnLogOut3.addActionListener(e);
     }
 
     public JButton getBtnLihat() {
@@ -96,6 +98,23 @@ public class menuLowongan extends javax.swing.JFrame {
         tblHapus.setModel(new DefaultTableModel(data,judul));
     }
     
+    public void viewAll3(List<BerkasLamaran> berkas){
+        String[] judul={
+            "Nama Pelamar","No Hp","Email","Skill","Pengalaman","Pendidikan"
+        };
+        String[][] data=new String[berkas.size()][6];
+        for(int i=0;i<berkas.size();i++){
+            BerkasLamaran b=berkas.get(i);
+            data[i][0]=String.valueOf(b.getNama());
+            data[i][1]=String.valueOf(b.getNoHp());
+            data[i][2]=String.valueOf(b.getEmail());
+            data[i][3]=String.valueOf(b.getSkill());
+            data[i][4]=String.valueOf(b.getPengalaman());
+            data[i][5]=String.valueOf(b.getPendidikan());            
+        }
+        tblPelamar.setModel(new DefaultTableModel(data,judul));
+    }
+    
     public void viewAll(List<Lowongan> low){
         String[] judul={
             "idLowongan","Nama Lowongan","DeadLine"
@@ -118,6 +137,7 @@ public class menuLowongan extends javax.swing.JFrame {
     public void addAdapter(MouseAdapter e){
         tblLowongan.addMouseListener(e);
         tblHapus.addMouseListener(e);
+        tblPelamar.addMouseListener(e);
     }
     public void setTanggal(String s){
         tgl.setText(s);

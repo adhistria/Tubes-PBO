@@ -19,17 +19,31 @@ public class Lowongan{
     private List<BerkasLamaran> berkasDiterima=new ArrayList<>();
     private int idLowongan;
     private int indexLowongan;
+    private String namaPerusahaan;
     private String deadline;
     private String nama;
     public Lowongan() {
     
     }
+
+    public String getNamaPerusahaan() {
+        return namaPerusahaan;
+    }
     
-    public Lowongan(int idLowongan,String deadline,String nama) {
+    public Lowongan(int idLowongan,String deadline,String nama,String namaPerusahaan) {
         this.deadline = deadline;
         this.nama=nama;
         this.idLowongan=idLowongan;
+        this.namaPerusahaan=namaPerusahaan;
     }
+
+    public Lowongan(int idLowongan, String deadline, String nama) {
+        this.idLowongan = idLowongan;
+        this.deadline = deadline;
+        this.nama = nama;
+    }
+    
+    
     
     public Lowongan(String deadline,String nama) {
         this.deadline = deadline;
