@@ -356,23 +356,4 @@ public class Database {
             System.out.println("update data gagal"+ex);
         }
     }
-//     public boolean cekDaftar(Pelamar p){
-//         int id=0;
-//         try{
-//             String query="SELECT idPelamar FROM MELAMAR WHERE"
-//                     + "idPelamar ='"+p.getId()+"'";
-//             ResultSet rs=statement.executeQuery(query);
-//             while(rs.next()){
-//                 id++;
-//             }
-//         }catch(SQLException ex){
-//             System.out.println("nggak ada cuk");
-//         }
-//         if(id!=0){
-//             return true;
-//         }else{
-//             return false;
-//         }
-//     }
-//tes
 }
