@@ -12,11 +12,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import Model.Aplikasi;
 import Model.BerkasLamaran;
+import Model.Lowongan;
 import Model.Pelamar;
 import Model.Perusahaan;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -34,12 +36,19 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
         this.model=model;
         this.p=p;
         view =new menuLowongan();
-        view.viewAll(model.cariPerusahaan(p.getNama()));
-        view.viewAll2(model.cariPerusahaan(p.getNama()));
+        if(model.cariPerusahaan(p.getNama())!=null){
+            view.viewAll(model.cariPerusahaan(p.getNama()));
+            view.viewAll2(model.cariPerusahaan(p.getNama()));
+            p.setDaftarLowongan(model.cariPerusahaan(p.getNama()));
+        }else
+        {
+            List <Lowongan> lowongan=new ArrayList<>();
+            view.viewAll(lowongan);
+            view.viewAll2(lowongan);
+        }
         view.setVisible(true);
         view.addListener(this);
         view.addAdapter(this);
-        p.setDaftarLowongan(model.cariPerusahaan(p.getNama()));
     }
     public void mouseClicked(MouseEvent e){
         if(e.getSource().equals(view.getTblLowongan())){
@@ -52,30 +61,42 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
         Object menulowongan = ae.getSource();
         
         if(menulowongan.equals(view.getAdd())){
-            String namaLowongan = view.getNamaLowongan();
-            String deadline = view.getDeadline();
-            p.createLowongan(deadline, namaLowongan);
-            model.createLowongan(p, p.getLowongan(namaLowongan));
-            JOptionPane.showMessageDialog(null, "Data berhasil!");
-//            p.setDaftarLowongan(model.cariPerusahaan(p.getNama()));
-            view.viewAll(model.cariPerusahaan(p.getNama()));
-            view.viewAll2(model.cariPerusahaan(p.getNama()));            
-            view.setNamaLowongan("");
-            view.setTanggal("");
+        if(view.getNamaLowongan().equals("")||view.getDeadline().equals("")){
+            JOptionPane.showMessageDialog(null, "Semua data haru diisi!");
+        }else{
+                String namaLowongan = view.getNamaLowongan();
+                String deadline = view.getDeadline();
+                p.createLowongan(deadline, namaLowongan);
+                model.createLowongan(p, p.getLowongan(namaLowongan));
+                JOptionPane.showMessageDialog(null, "Data berhasil!");
+                view.viewAll(model.cariPerusahaan(p.getNama()));
+                view.viewAll2(model.cariPerusahaan(p.getNama()));            
+                view.setNamaLowongan("");
+                view.setTanggal("");
+            }
         } else if(menulowongan.equals(view.getBtnLihat())){
-            if(model.cariPerusahaan(p.getNama()).size()>0){
+            if(model.cariPerusahaan(p.getNama())!=null){
                 view.setVisible(false);
                 new ControllerLihatPelamar(model,p,p.getDaftarLowongan().get(selected).getIdLowongan());
             }else{
                 JOptionPane.showMessageDialog(null, "Belum Ada Bekas Masuk");
             }
         }else if(menulowongan.equals(view.getBtnHapus())){
-            model.removeLowongan(p, p.getDaftarLowongan().get(selected2).getIdLowongan());
-//            p.removeLowongan(p.getDaftarLowongan().get(selected2).getIdLowongan());
-//            p.setDaftarLowongan(model.cariPerusahaan(p.getNama()));
-            JOptionPane.showMessageDialog(null, "Data berhasil dihapus!");
-            view.viewAll2(model.cariPerusahaan(p.getNama()));
-            view.viewAll(model.cariPerusahaan(p.getNama()));
+            if(model.cariPerusahaan(p.getNama())!=null){
+                model.removeLowongan(p, p.getDaftarLowongan().get(selected2).getIdLowongan());
+                p.removeLowongan(p.getDaftarLowongan().get(selected2).getIdLowongan());
+                if(model.cariPerusahaan(p.getNama())!=null){
+                    p.setDaftarLowongan(model.cariPerusahaan(p.getNama()));
+                    view.viewAll2(model.cariPerusahaan(p.getNama()));
+                    view.viewAll(model.cariPerusahaan(p.getNama()));
+                }else{
+                    List <Lowongan> lowongan=new ArrayList<>();
+                    view.viewAll(lowongan);
+                    view.viewAll2(lowongan);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Data Lowongan Tidak Ada");
+            }
         }else if(menulowongan.equals((view.getBtnLogOut()))){
             new ControllerLogin(model);
             view.dispose();

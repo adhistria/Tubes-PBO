@@ -52,15 +52,8 @@ class ControllerLihatPelamar extends MouseAdapter implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getEmail());
-//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(0).getIdBerkas());
-//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
-//        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getNama());
-//        System.out.println(""+idLowongan);
         if(source.equals(view.getBtnTerima())){
                 if(model.getBerkas(idLowongan)!=null){
-                     
-    //                        pindahBerkas(lowongan.getBerkas(idPelamar).getIdBerkas());
                     model.pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas(), idLowongan);
                     p.getLowongan(idLowongan).pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
                     JOptionPane.showMessageDialog(null, "Data telah diApprove!");

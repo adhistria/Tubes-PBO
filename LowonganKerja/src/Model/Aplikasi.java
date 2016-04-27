@@ -74,10 +74,10 @@ public class Aplikasi {
     public List<Lowongan> cariPerusahaan(String namaPerusahaan){
         List<Lowongan> low=new ArrayList<>();
         low=data.getLowongan(namaPerusahaan);
-        if(low!=null){
-            return low;
-        }else{
+        if(low.size()==0){
             return null;
+        }else{
+            return low;
         }
     }
     

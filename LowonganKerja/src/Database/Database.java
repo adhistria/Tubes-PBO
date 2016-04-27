@@ -290,7 +290,6 @@ public class Database {
                      + " idLowongan = '"+idLowongan+"'"
                      + "AND idPerusahaan = '"+p.getId()+"'";
              statement.execute(query);
-             p.removeLowongan(idLowongan);
               JOptionPane.showMessageDialog(null, "Data berhasil dihapus!");
          }catch(SQLException ex){
               JOptionPane.showMessageDialog(null, "Data tidak bisa di hapus!");
