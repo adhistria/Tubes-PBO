@@ -36,18 +36,22 @@ public class ControllerLogin implements ActionListener {
         public void actionPerformed(ActionEvent e){
             Object source=e.getSource();
             if(source.equals(view.getBtnLogin())){
-                String username=view.getUsername();
-                String password=view.getPassword();
-                if(model.loginPelamar(username,password)!=null){
-                    Pelamar p=model.loginPelamar(username, password);
-                    new ControllerMenuCariPerusahaan(model,p);
-                    view.dispose();
-                }else if(model.loginPerusahaan(username,password)!=null){
-                    Perusahaan p=model.loginPerusahaan(username, password);
-                    new ControllerMenuLowongan(model,p);
-                    view.dispose();
+                if(view.getUsername().equals("")||view.getPassword().equals("")){
+                    JOptionPane.showMessageDialog(null, "Semua data harus terisi");
                 }else{
-                    JOptionPane.showMessageDialog(null, "Invalid Password/Username");
+                    String username=view.getUsername();
+                    String password=view.getPassword();
+                    if(model.loginPelamar(username,password)!=null){
+                        Pelamar p=model.loginPelamar(username, password);
+                        new ControllerMenuCariPerusahaan(model,p);
+                        view.dispose();
+                    }else if(model.loginPerusahaan(username,password)!=null){
+                        Perusahaan p=model.loginPerusahaan(username, password);
+                        new ControllerMenuLowongan(model,p);
+                        view.dispose();
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Invalid Password/Username");
+                    }
                 }
             }else if(source.equals(view.getBtnRegistrasi())){
                 new ControllerRegistrasi(model);

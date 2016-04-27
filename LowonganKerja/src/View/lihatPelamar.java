@@ -145,12 +145,12 @@ public class lihatPelamar extends javax.swing.JFrame {
 
     
     private void tblBerkasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblBerkasMouseClicked
-        try{
-            int row=tblBerkas.getSelectedRow();
-            String tableClck=(tblBerkas.getModel().getValueAt(row, 0).toString());
-            int x=Integer.parseInt(tableClck);
-        }catch(Exception e){
-        }
+//        try{
+//            int row=tblBerkas.getSelectedRow();
+//            String tableClck=(tblBerkas.getModel().getValueAt(row, 0).toString());
+//            int x=Integer.parseInt(tableClck);
+//        }catch(Exception e){
+//        }
     }//GEN-LAST:event_tblBerkasMouseClicked
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed

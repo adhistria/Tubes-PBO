@@ -63,9 +63,13 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
             view.setNamaLowongan("");
             view.setTanggal("");
         } else if(menulowongan.equals(view.getBtnLihat())){
-            view.setVisible(false);
             System.out.println(""+p.getDaftarLowongan().size());
-            new ControllerLihatPelamar(model, p,p.getDaftarLowongan().get(selected).getIdLowongan());
+            if(model.cariPerusahaan(p.getNama()).size()>0){
+                view.setVisible(false);
+                new ControllerLihatPelamar(model,p,p.getDaftarLowongan().get(selected).getIdLowongan());
+            }else{
+                JOptionPane.showMessageDialog(null, "Belum Ada Bekas Masuk");
+            }
         }else if(menulowongan.equals(view.getBtnHapus())){
             model.removeLowongan(p, p.getDaftarLowongan().get(selected2).getIdLowongan());
 //            p.removeLowongan(p.getDaftarLowongan().get(selected2).getIdLowongan());
@@ -75,10 +79,13 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
             view.viewAll(model.cariPerusahaan(p.getNama()));
         }else if(menulowongan.equals((view.getBtnLogOut()))){
             new ControllerLogin(model);
+            view.dispose();
         }else if(menulowongan.equals((view.getBtnLogOut1()))){
             new ControllerLogin(model);
+            view.dispose();
         }else if(menulowongan.equals((view.getBtnLogOut2()))){
             new ControllerLogin(model);
+            view.dispose();
         }
     }
 

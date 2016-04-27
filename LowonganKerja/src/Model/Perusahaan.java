@@ -19,9 +19,6 @@ public class Perusahaan extends Orang {
     private List<Lowongan> daftarLowongan = new ArrayList<>();
     private String alamat;
 
-    public void setDaftarLowongan(List<Lowongan> daftarLowongan) {
-        this.daftarLowongan = daftarLowongan;
-    }
     
     public boolean cekLowongan() {
         if (daftarLowongan.isEmpty()) {
@@ -39,7 +36,11 @@ public class Perusahaan extends Orang {
         setNama(nama);
         setEmail(email);
     }
-
+    
+    public void setDaftarLowongan(List<Lowongan> daftarLowongan) {
+        this.daftarLowongan = daftarLowongan;
+    }
+    
     public String[] getNamaLowongan() {
         String[] s = new String[daftarLowongan.size()];
         for (int i = 0; i < daftarLowongan.size(); i++) {

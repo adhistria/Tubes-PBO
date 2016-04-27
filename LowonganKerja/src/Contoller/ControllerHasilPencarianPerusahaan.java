@@ -15,6 +15,7 @@ import Model.Perusahaan;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -35,12 +36,16 @@ public class ControllerHasilPencarianPerusahaan extends MouseAdapter implements 
         view.addListener(this);
         view.addAdapter(this);
         view.viewAll(lowongan);
-        view.setNamaPerusahaan(namaPerusahaan);
+        view.setNamaperusahaanset(namaPerusahaan);
     }
     public void actionPerformed(ActionEvent e){
         Object source=e.getSource();
         if(source.equals(view.getBtnDaftar())){
-            model.daftarKerja(p,lowongan.get(selected).getIdLowongan());
+            if(lowongan.size()==0){
+                JOptionPane.showMessageDialog(null, "Data Lowongan Tidak Ada");
+            }else{
+                model.daftarKerja(p,lowongan.get(selected).getIdLowongan());
+            }
         }else if(source.equals(view.getBtnKembali())){
             new ControllerMenuCariPerusahaan(model, p);
         }

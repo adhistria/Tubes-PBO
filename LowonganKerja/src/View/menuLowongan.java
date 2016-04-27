@@ -47,6 +47,9 @@ public class menuLowongan extends javax.swing.JFrame {
         btnAdd.addActionListener(e);
         btnLihat.addActionListener(e);
         btnHapus.addActionListener(e);
+        btnLogOut.addActionListener(e);
+        btnLogOut1.addActionListener(e);
+        btnLogOut2.addActionListener(e);
     }
 
     public JButton getBtnLihat() {

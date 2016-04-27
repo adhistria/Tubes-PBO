@@ -28,6 +28,7 @@ class ControllerLihatPelamar extends MouseAdapter implements ActionListener{
         private int idLowongan;
         private int idPelamar;
         private Lowongan lowongan;
+        
     public ControllerLihatPelamar(Aplikasi model, Perusahaan p,int idLowongan) {
         this.model = model;
         this.p=p;
@@ -37,24 +38,33 @@ class ControllerLihatPelamar extends MouseAdapter implements ActionListener{
         view.addListener(this);
         view.addAdapter(this);
         view.viewAll(model.getBerkas(idLowongan));
-        lowongan=p.getLowongan(idLowongan);
-        lowongan.setBerkasMasuk(model.getBerkas(idLowongan));
+        p.getLowongan(idLowongan).setBerkasMasuk(model.getBerkas(idLowongan));
+//        lowongan=p.getLowongan(idLowongan);
+//        lowongan.setBerkasMasuk(model.getBerkas(idLowongan));
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        System.out.println("idPelamar"+idPelamar);
-        System.out.println(""+lowongan.getBerkas(idPelamar).getIdBerkas());
-        System.out.println(""+lowongan.getBerkas(idPelamar).getNama());
+        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getEmail());
+        System.out.println(""+p.getLowongan(idLowongan).getBerkas(0).getIdBerkas());
+        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
+        System.out.println(""+p.getLowongan(idLowongan).getBerkas(idPelamar).getNama());
+        System.out.println(""+idLowongan);
         if(source.equals(view.getBtnTerima())){
-            p.getLowongan(idLowongan).pindahBerkas(lowongan.getBerkas(idPelamar).getIdBerkas());
-            model.pindahBerkas(lowongan.getBerkas(idPelamar).getIdBerkas(), idLowongan);
-            JOptionPane.showMessageDialog(null, "Data telah diApprove!");
-            view.dispose();
-            view.viewAll(model.getBerkas(idLowongan));
-            lowongan.setBerkasMasuk(model.getBerkas(idLowongan));
+            if(model.getBerkas(idLowongan).get(idPelamar).getIdBerkas()>0){
+                p.getLowongan(idLowongan).pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas());
+//                        pindahBerkas(lowongan.getBerkas(idPelamar).getIdBerkas());
+                model.pindahBerkas(p.getLowongan(idLowongan).getBerkas(idPelamar).getIdBerkas(), idLowongan);
+                JOptionPane.showMessageDialog(null, "Data telah diApprove!");
+                view.dispose();
+                view.viewAll(model.getBerkas(idLowongan));
+                p.getLowongan(idLowongan).setBerkasMasuk(model.getBerkas(idLowongan));
+            }else{
+                JOptionPane.showMessageDialog(null, "Data Na");
+            }
         } else if(source.equals(view.getBtnKembali())){
             new ControllerMenuLowongan(model,p);
+            view.dispose();
         } else if(source.equals((view.getBtnLogOut()))){
             new ControllerLogin(model);
         }
