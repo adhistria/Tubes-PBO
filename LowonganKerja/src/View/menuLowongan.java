@@ -155,13 +155,23 @@ public class menuLowongan extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblLowongan = new javax.swing.JTable();
+        tblLowongan = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex) {
+                return false;
+            }
+        }
+        ;
         btnLihat = new javax.swing.JButton();
         btnLogOut = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         btnHapus = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblHapus = new javax.swing.JTable();
+        tblHapus = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex) {
+                return false;
+            }
+        }
+        ;
         btnLogOut1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         namalowongan = new javax.swing.JLabel();
@@ -172,7 +182,12 @@ public class menuLowongan extends javax.swing.JFrame {
         btnLogOut2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tblPelamar = new javax.swing.JTable();
+        tblPelamar = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex) {
+                return false;
+            }
+        }
+        ;
         btnLogOut3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

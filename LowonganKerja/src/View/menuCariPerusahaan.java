@@ -62,11 +62,21 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         scroll = new javax.swing.JScrollBar();
         btnDaftar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableLowongan = new javax.swing.JTable();
+        tableLowongan = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex) {
+                return false;
+            }
+        }
+        ;
         btnLogOut2 = new javax.swing.JButton();
         berkasditerima = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tableBerkasDiterima = new javax.swing.JTable();
+        tableBerkasDiterima = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex) {
+                return false;
+            }
+        }
+        ;
         btnLogOut3 = new javax.swing.JButton();
         editberkas = new javax.swing.JPanel();
         skilleditlabel = new javax.swing.JLabel();
