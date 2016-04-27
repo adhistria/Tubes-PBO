@@ -106,6 +106,9 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
         }else if(menulowongan.equals((view.getBtnLogOut2()))){
             new ControllerLogin(model);
             view.dispose();
+        }else if (menulowongan.equals((view.getBtnLogOut3()))){
+            new ControllerLogin(model);
+            view.dispose();
         }
     }
 

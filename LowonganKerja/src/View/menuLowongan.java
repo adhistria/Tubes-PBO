@@ -63,6 +63,9 @@ public class menuLowongan extends javax.swing.JFrame {
     public JTable getTblHapus() {
         return tblHapus;
     }
+    public JTable getTblPelamar(){
+        return tblPelamar;
+    }
 
     public JTable getTblLowongan() {
         return tblLowongan;
@@ -75,6 +78,9 @@ public class menuLowongan extends javax.swing.JFrame {
     }
     public JButton getBtnLogOut2(){
         return btnLogOut1;
+    }
+    public JButton getBtnLogOut3(){
+        return btnLogOut3;
     }
     public void viewAll2(List<Lowongan> low){
         String[] judul={
@@ -144,6 +150,10 @@ public class menuLowongan extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         tgl = new javax.swing.JTextField();
         btnLogOut2 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblPelamar = new javax.swing.JTable();
+        btnLogOut3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -195,7 +205,7 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("                        Daftar Lowongan                        ", jPanel2);
+        jTabbedPane1.addTab("Daftar Lowongan", jPanel2);
 
         btnHapus.setText("Hapus");
 
@@ -242,7 +252,7 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
-        jTabbedPane1.addTab("                         Hapus Lowongan                       ", jPanel3);
+        jTabbedPane1.addTab("Hapus Lowongan", jPanel3);
 
         namalowongan.setText("Nama Lowongan        :");
 
@@ -308,7 +318,49 @@ public class menuLowongan extends javax.swing.JFrame {
                 .addGap(5, 5, 5))
         );
 
-        jTabbedPane1.addTab("                       Buat Lowongan                      ", jPanel1);
+        jTabbedPane1.addTab("Buat Lowongan", jPanel1);
+
+        tblPelamar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(tblPelamar);
+
+        btnLogOut3.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
+        btnLogOut3.setText("Log Out");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap(131, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(112, 112, 112))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(btnLogOut3)
+                        .addContainerGap())))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+                .addComponent(btnLogOut3)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Pelamar Diterima", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -318,7 +370,7 @@ public class menuLowongan extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         pack();
@@ -343,17 +395,21 @@ public class menuLowongan extends javax.swing.JFrame {
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnLogOut1;
     private javax.swing.JButton btnLogOut2;
+    private javax.swing.JButton btnLogOut3;
     private javax.swing.JLabel deadline;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField namaLowonganfield;
     private javax.swing.JLabel namalowongan;
     private javax.swing.JTable tblHapus;
     private javax.swing.JTable tblLowongan;
+    private javax.swing.JTable tblPelamar;
     private javax.swing.JTextField tgl;
     // End of variables declaration//GEN-END:variables
 }
