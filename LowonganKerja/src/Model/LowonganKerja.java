@@ -24,6 +24,7 @@ public class LowonganKerja {
     public static void main(String[] args) {
            Aplikasi drv = new Aplikasi();
            new ControllerLogin(drv);
+           //yeay
     }
     
 }
