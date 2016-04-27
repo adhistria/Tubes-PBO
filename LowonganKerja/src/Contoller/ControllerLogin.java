@@ -27,12 +27,6 @@ public class ControllerLogin implements ActionListener {
             view.setVisible(true);
             view.addListener(this);
         }
-//        public ControllerLogin(AplikasiConsole model,Orang o){
-//            this.model=model;
-//            view= new menuLogIn();
-//            view.setVisible(true);
-//            view.addListener(this);
-//        }
         public void actionPerformed(ActionEvent e){
             Object source=e.getSource();
             if(source.equals(view.getBtnLogin())){
