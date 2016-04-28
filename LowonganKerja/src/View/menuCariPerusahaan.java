@@ -54,10 +54,12 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         buatberkas = new javax.swing.JPanel();
         skilllabel = new javax.swing.JLabel();
         pengalamanlabel = new javax.swing.JLabel();
-        skill = new javax.swing.JTextField();
-        pengalaman = new javax.swing.JTextField();
         btnBuat = new javax.swing.JButton();
         btnLogOut1 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        skill = new javax.swing.JTextPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        pengalaman = new javax.swing.JTextPane();
         infolowongankerja = new javax.swing.JPanel();
         scroll = new javax.swing.JScrollBar();
         btnDaftar = new javax.swing.JButton();
@@ -80,11 +82,13 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         btnLogOut3 = new javax.swing.JButton();
         editberkas = new javax.swing.JPanel();
         skilleditlabel = new javax.swing.JLabel();
-        skilledit = new javax.swing.JTextField();
         pengalamaneditlabel = new javax.swing.JLabel();
-        pengalamanedit = new javax.swing.JTextField();
         btnEdit = new javax.swing.JButton();
         btnLogOut4 = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        pengalamanedit = new javax.swing.JTextPane();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        skilledit = new javax.swing.JTextPane();
         lihatberkas = new javax.swing.JPanel();
         berkasanda = new javax.swing.JLabel();
         idpelamar = new javax.swing.JLabel();
@@ -174,12 +178,6 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
 
         pengalamanlabel.setText("Pengalaman                   :");
 
-        skill.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                skillActionPerformed(evt);
-            }
-        });
-
         btnBuat.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
         btnBuat.setText("Buat");
         btnBuat.addActionListener(new java.awt.event.ActionListener() {
@@ -190,6 +188,10 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
 
         btnLogOut1.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
         btnLogOut1.setText("Log Out");
+
+        jScrollPane3.setViewportView(skill);
+
+        jScrollPane4.setViewportView(pengalaman);
 
         javax.swing.GroupLayout buatberkasLayout = new javax.swing.GroupLayout(buatberkas);
         buatberkas.setLayout(buatberkasLayout);
@@ -208,29 +210,28 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                                 .addGroup(buatberkasLayout.createSequentialGroup()
                                     .addComponent(pengalamanlabel)
                                     .addGap(18, 18, 18)
-                                    .addComponent(pengalaman))
+                                    .addComponent(jScrollPane4))
                                 .addGroup(buatberkasLayout.createSequentialGroup()
                                     .addComponent(skilllabel)
                                     .addGap(18, 18, 18)
-                                    .addComponent(skill, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 95, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         buatberkasLayout.setVerticalGroup(
             buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buatberkasLayout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
-                .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(skilllabel)
-                    .addComponent(skill, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61)
                 .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(buatberkasLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(pengalamanlabel))
-                    .addGroup(buatberkasLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pengalaman, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(72, 72, 72)
+                        .addComponent(skilllabel)
+                        .addGap(103, 103, 103))
+                    .addComponent(jScrollPane3))
+                .addGap(18, 18, 18)
+                .addGroup(buatberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pengalamanlabel)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65)
                 .addComponent(btnBuat)
                 .addGap(38, 38, 38)
                 .addComponent(btnLogOut1)
@@ -336,12 +337,6 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
 
         skilleditlabel.setText("Skill                                 :");
 
-        skilledit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                skilleditActionPerformed(evt);
-            }
-        });
-
         pengalamaneditlabel.setText("Pengalaman                   :");
 
         btnEdit.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
@@ -355,6 +350,10 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         btnLogOut4.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 12)); // NOI18N
         btnLogOut4.setText("Log Out");
 
+        jScrollPane7.setViewportView(pengalamanedit);
+
+        jScrollPane8.setViewportView(skilledit);
+
         javax.swing.GroupLayout editberkasLayout = new javax.swing.GroupLayout(editberkas);
         editberkas.setLayout(editberkasLayout);
         editberkasLayout.setHorizontalGroup(
@@ -363,40 +362,47 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
                 .addGap(78, 78, 78)
                 .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(editberkasLayout.createSequentialGroup()
-                            .addComponent(pengalamaneditlabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(pengalamanedit))
-                        .addGroup(editberkasLayout.createSequentialGroup()
-                            .addComponent(skilleditlabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(skilledit, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(96, Short.MAX_VALUE))
+                    .addGroup(editberkasLayout.createSequentialGroup()
+                        .addComponent(pengalamaneditlabel)
+                        .addGap(395, 395, 395))
+                    .addGroup(editberkasLayout.createSequentialGroup()
+                        .addComponent(skilleditlabel)
+                        .addGap(394, 394, 394)))
+                .addContainerGap(97, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editberkasLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogOut4)
-                .addContainerGap())
+                .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editberkasLayout.createSequentialGroup()
+                        .addComponent(btnLogOut4)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editberkasLayout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(88, 88, 88))))
+            .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editberkasLayout.createSequentialGroup()
+                    .addContainerGap(234, Short.MAX_VALUE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(87, 87, 87)))
         );
         editberkasLayout.setVerticalGroup(
             editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editberkasLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(skilleditlabel)
-                    .addComponent(skilledit, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(editberkasLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(pengalamaneditlabel))
-                    .addGroup(editberkasLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pengalamanedit, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(51, 51, 51)
+                .addComponent(skilleditlabel)
+                .addGap(18, 121, Short.MAX_VALUE)
+                .addComponent(pengalamaneditlabel)
+                .addGap(8, 8, 8)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnEdit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addGap(73, 73, 73)
                 .addComponent(btnLogOut4)
                 .addContainerGap())
+            .addGroup(editberkasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(editberkasLayout.createSequentialGroup()
+                    .addGap(57, 57, 57)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                    .addGap(292, 292, 292)))
         );
 
         jTabbedPane1.addTab("Edit Berkas", editberkas);
@@ -517,10 +523,6 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCariActionPerformed
     
-    private void skillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_skillActionPerformed
-
     private void btnBuatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuatActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBuatActionPerformed
@@ -528,10 +530,6 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLogOutActionPerformed
-
-    private void skilleditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skilleditActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_skilleditActionPerformed
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
         // TODO add your handling code here:
@@ -631,12 +629,13 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     }
     public void viewAllBerkasDiterima(List<Lowongan> lowongan){
         String [] judul= {
-            "Nama Lowongan"
+            "Nama Lowongan","Nama Perusahaan"
         };
-        String[][] data=new String[lowongan.size()][1];
+        String[][] data=new String[lowongan.size()][2];
         for(int i=0;i<lowongan.size();i++){
             Lowongan l=lowongan.get(i);
             data[i][0]=String.valueOf(l.getNama());
+            data[i][1]=String.valueOf(l.getNamaPerusahaan());
         }
         tableBerkasDiterima.setModel(new DefaultTableModel(data,judul));
     }
@@ -744,6 +743,10 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel lihatberkas;
     private javax.swing.JLabel namapelamar;
@@ -751,15 +754,15 @@ public class menuCariPerusahaan extends javax.swing.JFrame {
     private javax.swing.JLabel nmperusahaanlabel;
     private javax.swing.JLabel nohppelamar;
     private javax.swing.JLabel pendidikan;
-    private javax.swing.JTextField pengalaman;
+    private javax.swing.JTextPane pengalaman;
     private javax.swing.JLabel pengalamanberkas;
-    private javax.swing.JTextField pengalamanedit;
+    private javax.swing.JTextPane pengalamanedit;
     private javax.swing.JLabel pengalamaneditlabel;
     private javax.swing.JLabel pengalamanlabel;
     private javax.swing.JScrollBar scroll;
-    private javax.swing.JTextField skill;
+    private javax.swing.JTextPane skill;
     private javax.swing.JLabel skillberkas;
-    private javax.swing.JTextField skilledit;
+    private javax.swing.JTextPane skilledit;
     private javax.swing.JLabel skilleditlabel;
     private javax.swing.JLabel skilllabel;
     private javax.swing.JTable tableBerkasDiterima;

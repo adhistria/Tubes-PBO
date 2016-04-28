@@ -63,7 +63,7 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
             }
             else{
                 String namaPerusahaan=view.getNmperusahaan();
-                if(model.cariPerusahaan(namaPerusahaan)!=null){
+                if(model.cariPerusahaan(namaPerusahaan.toUpperCase())!=null){
                     List<Lowongan> low=model.cariPerusahaan(namaPerusahaan);
                     view.setVisible(false);
                     new ControllerHasilPencarianPerusahaan(model,low,p,namaPerusahaan);                
@@ -79,8 +79,6 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
                 String pengalaman=view.getPengalaman();
                 p.createBerkas(skill, pengalaman);
                 model.createBerkas(p, p.getBerkas());
-                view.setPengalaman("");
-                view.setSkill("");
                 int s=model.getBerkasPelamar(p).getIdBerkas();
                 String c=""+s;
                 view.setIdpelamarset(c);
@@ -91,8 +89,12 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
                 view.setSkilllihatset(model.getBerkasPelamar(p).getSkill());
                 view.setPengalamanlihatset(model.getBerkasPelamar(p).getPengalaman());
             }   
+            view.setPengalaman("");
+            view.setSkill("");
         }else if(source.equals(view.getBtnDaftar())){
-            if(model.tampilLowongan().size()>0){
+            if(model.getBerkasPelamar(p)==null){
+                JOptionPane.showMessageDialog(null, "Anda Harus Membuat Berkas Terlebih Dahulu");
+            }else if(model.tampilLowongan().size()>0){
                 model.daftarKerja(p, lowongan.get(selected).getIdLowongan());
             }else{
                 JOptionPane.showMessageDialog(null, "Data Tidak Ada");
@@ -123,11 +125,11 @@ public class ControllerMenuCariPerusahaan extends MouseAdapter implements Action
                 String pengalamanedit = view.getPengalamanedit();
                 model.updateBerkas(p,skilledit,pengalamanedit);
                 JOptionPane.showMessageDialog(null, "Data Berhasil di Update");
-                view.setPengalamanedit("");
-                view.setSkilledit("");
                 view.setSkilllihatset(model.getBerkasPelamar(p).getSkill());
                 view.setPengalamanlihatset(model.getBerkasPelamar(p).getPengalaman());
             }
+            view.setPengalamanedit("");
+            view.setSkilledit("");
         }else if(source.equals(view.getBtnLogOut5())){
             new ControllerLogin(model);
             view.dispose();

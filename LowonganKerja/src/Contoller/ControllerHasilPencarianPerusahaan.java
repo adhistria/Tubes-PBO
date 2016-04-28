@@ -43,11 +43,14 @@ public class ControllerHasilPencarianPerusahaan extends MouseAdapter implements 
         if(source.equals(view.getBtnDaftar())){
             if(lowongan.size()==0){
                 JOptionPane.showMessageDialog(null, "Data Lowongan Tidak Ada");
+            }else if(model.getBerkasPelamar(p)==null){
+                JOptionPane.showMessageDialog(null, "Anda Harus Membuat Berkas Terlebih Dahulu");
             }else{
                 model.daftarKerja(p,lowongan.get(selected).getIdLowongan());
             }
         }else if(source.equals(view.getBtnKembali())){
             new ControllerMenuCariPerusahaan(model, p);
+            view.dispose();
         }
     }
     public void mouseClicked(MouseEvent e){

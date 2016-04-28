@@ -76,16 +76,16 @@ public class ControllerMenuLowongan extends MouseAdapter implements ActionListen
                 model.createLowongan(p, p.getLowongan(namaLowongan));
                 JOptionPane.showMessageDialog(null, "Data berhasil!");
                 view.viewAll(model.cariPerusahaan(p.getNama()));
-                view.viewAll2(model.cariPerusahaan(p.getNama()));            
-                view.setNamaLowongan("");
-                view.setTanggal("");
+                view.viewAll2(model.cariPerusahaan(p.getNama()));
             }
+            view.setNamaLowongan("");
+            view.setTanggal("");
         } else if(menulowongan.equals(view.getBtnLihat())){
             if(model.cariPerusahaan(p.getNama())!=null){
                 view.setVisible(false);
                 new ControllerLihatPelamar(model,p,p.getDaftarLowongan().get(selected).getIdLowongan());
             }else{
-                JOptionPane.showMessageDialog(null, "Belum Ada Bekas Masuk");
+                JOptionPane.showMessageDialog(null, "Tidak Ada Lowongan");
             }
         }else if(menulowongan.equals(view.getBtnHapus())){
             if(model.cariPerusahaan(p.getNama())!=null){

@@ -65,7 +65,7 @@ public class ControllerRegistrasi implements ActionListener {
                 String noHp1 = view.getNoHp1();
                 String alamat = view.getAlamat();
                 Perusahaan p = new Perusahaan();
-                p.setNama(nama1);
+                p.setNama(nama1.toUpperCase());
                 p.setUsername(username1);
                 p.setPassword(password1);
                 p.setEmail(email1);

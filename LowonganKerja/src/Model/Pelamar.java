@@ -13,34 +13,16 @@ import java.util.List;
  * @author ISMA
  */
 public class Pelamar extends Orang{
-//    private String skill;
     private BerkasLamaran berkas;
- //   private String pengalaman;
     private String pendidikan;
-
-//    public String getSkill() {
-//        return skill;
-//    }
 
     public String getPendidikan() {
         return pendidikan;
     }
 
-//    public void setSkill(String skill) {
-//        this.skill = skill;
-//    }
-
     public void setPendidikan(String pendidikan) {
         this.pendidikan = pendidikan;
     }
-    
-//    public void setPengalaman (String pengalaman){
-//        this.pengalaman = pengalaman;
-//    }
-//	
-//    public String getPengalaman (){
-//        return pengalaman;
-//    }
     
     public void createBerkas (int idBerkas){
         berkas = new BerkasLamaran();

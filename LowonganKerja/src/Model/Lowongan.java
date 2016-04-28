@@ -18,7 +18,6 @@ public class Lowongan{
     private List<BerkasLamaran> berkasMasuk=new ArrayList<>();
     private List<BerkasLamaran> berkasDiterima=new ArrayList<>();
     private int idLowongan;
-    private int indexLowongan;
     private String namaPerusahaan;
     private String deadline;
     private String nama;
@@ -42,16 +41,13 @@ public class Lowongan{
         this.deadline = deadline;
         this.nama = nama;
     }
-    
-    
-    
+ 
     public Lowongan(String deadline,String nama) {
         this.deadline = deadline;
         this.nama=nama;
         this.idLowongan=-1;
     }
 
-    
     public String[] getBerkasMasuk1(){
         String[] s=new String[berkasMasuk.size()];
         for(int i=0;i<berkasMasuk.size();i++){
@@ -106,10 +102,6 @@ public class Lowongan{
         return idLowongan;
     }
     
-    public int getIndexLowongan(){
-        return indexLowongan;
-    }
-    
     public String getDeadline() {
         return deadline;
     }
@@ -121,10 +113,6 @@ public class Lowongan{
         return berkasMasuk;
     }
     
-    public void setIndexLowongan(int indexLowongan) {
-        this.indexLowongan = indexLowongan;
-    }
-
     public void setBerkasMasuk(List<BerkasLamaran> berkasMasuk) {
         this.berkasMasuk = berkasMasuk;
     }

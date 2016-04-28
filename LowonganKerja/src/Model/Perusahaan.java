@@ -40,22 +40,10 @@ public class Perusahaan extends Orang {
     public void setDaftarLowongan(List<Lowongan> daftarLowongan) {
         this.daftarLowongan = daftarLowongan;
     }
-    
-    public String[] getNamaLowongan() {
-        String[] s = new String[daftarLowongan.size()];
-        for (int i = 0; i < daftarLowongan.size(); i++) {
-            s[i] = "Nama Lowongan " + daftarLowongan.get(i).getNama() + " Id Lowongan " + daftarLowongan.get(i).getIdLowongan();
-        }
-        return s;
-    }
 
     public void createLowongan(String deadline, String nama) {
         daftarLowongan.add(new Lowongan(deadline, nama));
     }
-
-//    public Lowongan getLowongan(int indexLowongan) {
-//        return daftarLowongan.get(indexLowongan);
-//    }
 
     public Lowongan getLowongan(int idLowongan) {
         for (int i = 0; i < daftarLowongan.size(); i++) {

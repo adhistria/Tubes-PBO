@@ -249,7 +249,7 @@ public class Database {
                      + "AND status = '"+status+"'";
              ResultSet rs=statement.executeQuery(query);
              while(rs.next()){
-                 Lowongan loker =new Lowongan(rs.getInt("idLowongan"), rs.getString("deadline"), rs.getString("namaLowongan"));
+                 Lowongan loker =new Lowongan(rs.getInt("idLowongan"), rs.getString("deadline"), rs.getString("namaLowongan"),rs.getString("nmPerusahaan"));
                  lowongan.add(loker);
              }
              return lowongan;
