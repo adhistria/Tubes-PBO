@@ -52,7 +52,10 @@ public class menuLogIn extends javax.swing.JFrame {
         return btnRegistrasi;
     }
     
-
+    public void refresh(String s){
+        username.setText(s);
+        password.setText(s);
+    }
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
